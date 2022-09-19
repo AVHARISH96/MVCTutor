@@ -11,6 +11,15 @@ namespace MVCTutorial.Controllers
         // GET: Custom
         public ActionResult Index()
         {
+            TempData["mykey"] = "This is My Key";
+            return View();
+        }
+
+        public ActionResult Index2()
+        {
+            ViewBag.Text = TempData["mykey"];
+           // ViewBag.Text = TempData.Peek("mykey");
+            //TempData.Keep("mykey");
             return View();
         }
 
