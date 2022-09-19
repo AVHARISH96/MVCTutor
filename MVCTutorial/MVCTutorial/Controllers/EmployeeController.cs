@@ -29,5 +29,10 @@ namespace MVCTutorial.Controllers
         {
             return "id= " + id + "dept =" + dept;
         }
+
+        public ActionResult About()
+        {
+            return View("~/Views/Custom/Index.cshtml");
+        }
     }
 }
