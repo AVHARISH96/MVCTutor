@@ -34,7 +34,7 @@ namespace MVCTutorial.Controllers
 
         public ActionResult About()
         {
-            return View("~/Views/Custom/Index.cshtml");
+            return View();
         }
 
         public ActionResult ShowEmployee(int id)
