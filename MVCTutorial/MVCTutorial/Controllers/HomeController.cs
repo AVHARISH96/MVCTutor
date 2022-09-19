@@ -10,6 +10,10 @@ namespace MVCTutorial.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.MyProperty = "Hello";
+            ViewBag.MyList = new List<string>() { "Harish", "Chethan" };
+            ViewData["MyList"] = new List<string>() { "Harish", "Chethan" };
+            ViewData["Key"] = "Value";
             return View();
         }
 

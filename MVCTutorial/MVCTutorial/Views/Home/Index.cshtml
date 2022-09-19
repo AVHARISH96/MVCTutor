@@ -29,3 +29,14 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+<h1>@ViewBag.MyProperty</h1>
+@foreach (var item in ViewBag.MyList)
+{
+    <h1>@item</h1>
+}
+<h2>@ViewData["Key"]</h2>
+@foreach (var item in (List<string>) ViewData["MyList"])
+{
+    <h1>@item</h1>
+}
