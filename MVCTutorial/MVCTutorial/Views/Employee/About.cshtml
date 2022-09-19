@@ -24,4 +24,15 @@
     {
         <h2>Lesser</h2>
     }
+    @helper myHelper(List<string> Names) { 
+
+    @Html.ActionLink("CLick","ShowEmployee",new {id=2})
+    @Html.TextBox("Name","Name")
+
+    foreach (var str in Names)
+    {
+        <h2>@str</h2>
+    }
+}
+    @myHelper(new List<string>() { "Manish", "Guru" });
 }

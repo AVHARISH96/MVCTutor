@@ -10,7 +10,7 @@ namespace MVCTutorial.Controllers
 {
     public class EmployeeController : Controller
     {
-        // GET: Employee
+       // GET: Employee
         public string EmployeeProfile(int id)
         {
             if (id == 1)
@@ -37,11 +37,24 @@ namespace MVCTutorial.Controllers
             return View();
         }
 
+        public ActionResult ShowEmployees()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ShowEmployees(Employee employee)
+        {
+            Employee employee1 = employee;
+            return View();
+        }
+
         public ActionResult ShowEmployee(int id)
         {
             var data = GetEmployee(id);
             return View(data);
         }
+
         private Employee GetEmployee(int id)
         {
 

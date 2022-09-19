@@ -168,6 +168,7 @@
     <Content Include="Views\Custom\Index.cshtml" />
     <Content Include="Views\Employee\About.cshtml" />
     <Content Include="Views\Employee\ShowEmployee.cshtml" />
+    <Content Include="Views\Employee\ShowEmployees.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

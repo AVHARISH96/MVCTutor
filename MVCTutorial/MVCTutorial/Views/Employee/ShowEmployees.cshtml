@@ -1,0 +1,16 @@
+﻿
+@model MVCTutorial.Models.Employee
+@{
+    ViewBag.Title = "ShowEmployees";
+}
+
+<h2>ShowEmployees</h2>
+
+@using (@Html.BeginForm("myForm"))
+{
+
+@Html.TextBoxFor(x => x.Id)
+@Html.TextBoxFor(y => y.Name)
+
+    <input type="submit" value="Click" />
+}
