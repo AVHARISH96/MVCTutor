@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MVCTutorial.Controllers
 {
+    [RoutePrefix("Employee")]
     public class EmployeeController : Controller
     {
        // GET: Employee
@@ -25,6 +26,26 @@ namespace MVCTutorial.Controllers
             {
                 return "No Record Found";
             }
+        }
+
+        [HttpGet]
+        public ActionResult GetEmployees()
+        {
+            List<Employee> employeeList = new List<Employee>();
+            employeeList.Add(new Employee { Id = 1, Name = "Chethan" });
+            employeeList.Add(new Employee { Id = 2, Name = "Raja" });
+            return View(employeeList);
+        }
+
+        [HttpGet]
+        [Route("~/Get/{id}")]
+        public ActionResult GetMyEmployee(int id)
+        {
+            List<Employee> employeeList = new List<Employee>();
+            employeeList.Add(new Employee { Id = 1, Name = "Chethan" });
+            employeeList.Add(new Employee { Id = 2, Name = "Raja" });
+            var myEmployee= employeeList.Where(x=>x.Id == id).FirstOrDefault();
+            return View(myEmployee);
         }
 
         public string Address(int id, int? dept=null)

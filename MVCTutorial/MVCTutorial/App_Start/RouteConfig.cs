@@ -13,6 +13,13 @@ namespace MVCTutorial
         {
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
+            routes.MapMvcAttributeRoutes();
+            routes.MapRoute(
+               name: "getEmployees",
+               url: "Employee/GetEmployees",
+               defaults: new { controller = "Employee", action = "GetEmployees", id = UrlParameter.Optional }
+           );
+
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

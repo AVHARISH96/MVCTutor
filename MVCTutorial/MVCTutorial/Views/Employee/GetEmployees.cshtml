@@ -1,0 +1,13 @@
+﻿@model IEnumerable<MVCTutorial.Models.Employee> 
+@{
+    ViewBag.Title = "GetEmployees";
+}
+
+<h2>GetEmployees</h2>
+
+
+@foreach(var item in @Model)
+            {
+        <h1>@item.Id</h1>
+        <h1>@item.Name</h1>
+            }
