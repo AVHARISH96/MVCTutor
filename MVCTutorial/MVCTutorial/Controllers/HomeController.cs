@@ -1,4 +1,5 @@
 ﻿using MVCTutorial.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -53,7 +54,12 @@ namespace MVCTutorial.Controllers
             return "Employee ID" + emp.Id + " Name" + emp.Name;
         }
 
-
+        public JsonResult GetJsonResult()
+        {
+            Employee emp = new Employee() { Id = 1, Name = "John", Salary = 32 };
+            var jsonobj=JsonConvert.SerializeObject(emp);
+            return Json(jsonobj,JsonRequestBehavior.AllowGet);
+        }
 
 
         public ActionResult About()

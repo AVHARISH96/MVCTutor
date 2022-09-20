@@ -1,0 +1,27 @@
+﻿
+@{
+    ViewBag.Title = "JqueryView";
+}
+
+<h2>JqueryView</h2>
+
+<html>
+<head>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+</head>
+    <body>
+        <label id="lbl"></label>
+        <input type="text" id="name" />
+        <input type="button" onclick="OnClick()" value="Click" />
+    </body>
+
+</html>
+
+<script>
+    function OnClick() {
+        var txt = $("#name").val();
+        $("#lbl").text(txt);
+       // alert('Hello World');
+        alert(txt);
+    }
+</script>

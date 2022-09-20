@@ -53,7 +53,10 @@ namespace MVCTutorial.Controllers
             return View("ValidateEmp");
         }
 
-
+        public ActionResult JqueryView()
+        {
+            return View();
+        }
         [HttpGet]
         [Route("~/Get/{id}")]
         public ActionResult GetMyEmployee(int id)

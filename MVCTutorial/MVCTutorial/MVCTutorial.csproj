@@ -177,6 +177,7 @@
     <Content Include="Views\Home\PostUsingParameters.cshtml" />
     <Content Include="Views\Employee\ValidateEmployee.cshtml" />
     <Content Include="Views\Employee\ValidateEmp.cshtml" />
+    <Content Include="Views\Employee\JqueryView.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
