@@ -38,6 +38,23 @@ namespace MVCTutorial.Controllers
         }
 
         [HttpGet]
+        public ActionResult ValidateEmp()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult ValidateEmployee(Employee employee)
+        {
+            if (ModelState.IsValid)
+            {
+                return View();
+            }
+            return View("ValidateEmp");
+        }
+
+
+        [HttpGet]
         [Route("~/Get/{id}")]
         public ActionResult GetMyEmployee(int id)
         {

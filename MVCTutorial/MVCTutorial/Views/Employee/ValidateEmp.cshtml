@@ -1,0 +1,18 @@
+﻿@model MVCTutorial.Models.Employee
+@{
+    ViewBag.Title = "ValidateEmp";
+}
+
+<h2>ValidateEmp</h2>
+
+@using (Html.BeginForm("ValidateEmployee", "Employee", FormMethod.Post))
+{
+    @Html.ValidationSummary()
+    @Html.TextBoxFor(x => x.Id);
+
+    @Html.TextBoxFor(x => x.Name);
+
+    @Html.TextBoxFor(x => x.Salary);
+    <input type="submit" value="Submit" />
+}
+

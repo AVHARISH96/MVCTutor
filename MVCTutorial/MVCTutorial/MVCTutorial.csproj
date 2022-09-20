@@ -124,6 +124,7 @@
     <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="CustomHelper.cs" />
+    <Compile Include="CustomValidator.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -174,6 +175,8 @@
     <Content Include="Views\Employee\GetEmployees.cshtml" />
     <Content Include="Views\Employee\GetMyEmployee.cshtml" />
     <Content Include="Views\Home\PostUsingParameters.cshtml" />
+    <Content Include="Views\Employee\ValidateEmployee.cshtml" />
+    <Content Include="Views\Employee\ValidateEmp.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
