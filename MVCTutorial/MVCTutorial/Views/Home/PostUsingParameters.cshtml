@@ -1,0 +1,39 @@
+﻿@model MVCTutorial.Models.Employee
+@{
+    ViewBag.Title = "PostUsingParameters";
+}
+
+<h2>PostUsingParameters</h2>
+
+@using (Html.BeginForm("PostUsingParameters", "Home"))
+{
+    @Html.TextBox("firstName", "firstName")
+    @Html.TextBox("lastName", "lastName")
+    <input type="submit" value="Submit" />
+}
+<h2>PostUsingRequest</h2>
+
+@using (Html.BeginForm("PostUsingRequest", "Home"))
+{
+    @Html.TextBox("firstName", "firstName")
+    @Html.TextBox("lastName", "lastName")
+    <input type="submit" value="Submit" />
+}
+
+<h2>PostUsingFormCollection</h2>
+
+@using (Html.BeginForm("PostUsingFormCollection", "Home"))
+{
+    @Html.TextBox("firstName", "firstName")
+    @Html.TextBox("lastName", "lastName")
+    <input type="submit" value="Submit" />
+}
+
+<h2>PostUsingFormCollection</h2>
+
+@using (Html.BeginForm("PostUsingBinding", "Home"))
+{
+    @Html.TextBoxFor(x=>x.Id)
+    @Html.TextBoxFor(x=>x.Name)
+    <input type="submit" value="Submit" />
+}

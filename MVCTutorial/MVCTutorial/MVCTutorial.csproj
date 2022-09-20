@@ -173,6 +173,7 @@
     <Content Include="Views\Custom\Index2.cshtml" />
     <Content Include="Views\Employee\GetEmployees.cshtml" />
     <Content Include="Views\Employee\GetMyEmployee.cshtml" />
+    <Content Include="Views\Home\PostUsingParameters.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

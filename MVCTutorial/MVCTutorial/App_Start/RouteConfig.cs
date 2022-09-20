@@ -19,6 +19,12 @@ namespace MVCTutorial
                url: "Employee/GetEmployees",
                defaults: new { controller = "Employee", action = "GetEmployees", id = UrlParameter.Optional }
            );
+            routes.MapRoute(
+         name: "PostUsingParameters",
+         url: "Home/PostUsingParameters",
+         defaults: new { controller = "Home", action = "PostUsingParameters", id = UrlParameter.Optional }
+     );
+
 
             routes.MapRoute(
                 name: "Default",

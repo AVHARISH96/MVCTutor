@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MVCTutorial.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -16,6 +17,44 @@ namespace MVCTutorial.Controllers
             ViewData["Key"] = "Value";
             return View();
         }
+
+        [HttpGet]
+        public ActionResult PostUsingParameters()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public string PostUsingParameters (string firstName,string lastName)
+        {
+            
+            return "FirstName"+firstName +" LastName"+lastName;
+        }
+
+        [HttpPost]
+        public string PostUsingRequest()
+        {
+            var firstName = Request["firstName"];
+            var lastName = Request["lastName"];
+            return "FirstName" + firstName + " LastName" + lastName;
+        }
+
+        [HttpPost]
+        public string PostUsingFormCollection(FormCollection form)
+        {
+            var firstName = form["firstName"];
+            var lastName = form["lastName"];
+            return "FirstName" + firstName + " LastName" + lastName;
+        }
+
+        [HttpPost]
+        public string PostUsingBinding(Employee emp)
+        {
+            return "Employee ID" + emp.Id + " Name" + emp.Name;
+        }
+
+
+
 
         public ActionResult About()
         {
