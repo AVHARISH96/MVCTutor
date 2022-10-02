@@ -183,6 +183,9 @@
     <Content Include="Views\Employee\GetAjax.cshtml" />
     <Content Include="Views\Employee\AddEmployee.cshtml" />
     <Content Include="Views\Employee\AjaxForm.cshtml" />
+    <Content Include="Views\Shared\_Card.cshtml" />
+    <Content Include="Views\Home\GetDate.cshtml" />
+    <Content Include="Views\Shared\CustomError.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
