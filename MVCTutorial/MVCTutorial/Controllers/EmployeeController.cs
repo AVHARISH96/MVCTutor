@@ -1,4 +1,5 @@
 ﻿using MVCTutorial.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -51,6 +52,46 @@ namespace MVCTutorial.Controllers
                 return View();
             }
             return View("ValidateEmp");
+        }
+
+
+  /*      public JsonResult GetEmployee()
+        {
+            Employee employee = new Employee();
+            employee.Id = 1;
+            employee.Salary = 323;
+            employee.Name = "Mani";
+           
+        }*/
+
+        public ActionResult AjaxForm()
+        {
+            return View();
+        }
+
+        public JsonResult Countries()
+        {
+            var countries = new List<string>();
+            countries.Add("INdia");
+            var json=JsonConvert.SerializeObject(countries);
+            return Json(json, JsonRequestBehavior.AllowGet);
+        }
+        [HttpPost]
+        public ActionResult AjaxForm(Employee employee)
+        {
+            return View();
+        }
+        public ActionResult AddEmployee()
+        {
+            return View();
+        }
+        public JsonResult InsertEmployee(Employee emp)
+        {
+            return Json("true", JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult GetAjax()
+        {
+            return View();
         }
 
         public ActionResult JqueryView()

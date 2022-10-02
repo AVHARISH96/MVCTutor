@@ -1,0 +1,45 @@
+﻿
+@{
+    ViewBag.Title = "AddEmployee";
+}
+
+<h2>AddEmployee</h2>
+
+<div>
+    <input type="text" id="Id" />
+    <input type="text" id="Name" />
+    <input type="text" id="Salary" />
+
+    <input type="button" value="Add" onclick="BtnClick() " />
+</div>
+
+<script>
+
+    function BtnClick() {
+        var id = $("#Id").val();
+        var name = $("#Name").val();
+        var salary = $("#Salary").val();
+
+        var obj = {
+            Id: id,
+            Name: name,
+            Salary: salary
+        }
+        SubmitForm(obj);
+    }
+
+    function SubmitForm(obj) {
+        $.ajax({
+            url: "/Employee/InsertEmployee",
+            method: "POST",
+            data: obj,
+            success: function (data) {
+               
+                    alert(data); 
+            },
+            error: function (err) {
+                console.error(err);
+            }
+        })
+    }
+</script>

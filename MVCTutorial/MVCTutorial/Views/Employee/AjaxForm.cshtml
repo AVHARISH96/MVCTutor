@@ -1,0 +1,36 @@
+﻿@model MVCTutorial.Models.Employee
+@{
+    ViewBag.Title = "AjaxForm";
+}
+
+<h2>AjaxForm</h2>
+
+@using(Ajax.BeginForm("AjaxForm",new AjaxOptions() { OnSuccess = "fnsuccess", OnFailure = "fnfailure" }))
+            {
+<div>
+    @Html.EditorFor(x => x.Id)
+    @Html.EditorFor(x => x.Name)
+    @Html.EditorFor(x => x.Salary)
+
+    <input type="submit" value="CLick" />
+</div>
+            }
+
+@Ajax.ActionLink("Countries","Countries",new AjaxOptions()
+{
+    InsertionMode=InsertionMode.Replace,
+    UpdateTargetId="ListContainer"
+} )
+
+<div id="ListContainer">
+
+</div>
+<script>
+    function fnsuccess(data) {
+        console.log(data);
+    }
+    function fnfailure(err) {
+        console.log(err);
+    }
+
+</script>

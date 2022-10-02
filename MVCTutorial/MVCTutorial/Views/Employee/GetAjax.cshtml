@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "GetAjax";
+}
+
+<h2>GetAjax</h2>
+
+
+<div>
+
+    <h2>Id</h2>-<h2 id="stdId"></h2>
+    <h2>Name</h2>-<h2 id="stdName"></h2>
+    <h2>Email</h2>-<h2 id="stdEmail"></h2>
+
+    <input type="button" value="GetAjax" onclick="BtnClick()" />
+</div>
+
+<script>
+
+    function BtnClick() {
+        $.ajax({
+            url: "/Home/GetJsonResult",
+            method: "GET",
+            success: function (data) {
+                data = JSON.parse(data)
+                console.log(data);
+                $("#stdId").text(data.Id)
+                $("#stdName").text(data.Name)
+                $("#stdEmail").text(data.Salary)
+            },
+            error: function (err) {
+                console.error(err);
+            }
+        })
+    }
+</script>
